@@ -1,0 +1,14 @@
+PREFIX mp: <http://sem.tenforce.com/vocabularies/mapping-platform/>
+PREFIX semcore: <http://mu.semte.ch/vocabularies/core/>
+SELECT ?from ?to ?type
+where {
+  ?effort a mp:MappingEffort .
+  ?effort semcore:uuid %effort% .
+  ?mapping mp:mappingEffort ?effort .
+  ?mapping mp:mapsFrom ?from .
+  ?mapping mp:mapsTo ?to .
+  ?mapping mp:matchType ?typeString .
+  FILTER(?typeString != "no") .
+  BIND( IRI(CONCAT("http://www.w3.org/2004/02/skos/core#", ?typeString, "Match")) AS ?type)
+}
+ORDER BY ?from ?to

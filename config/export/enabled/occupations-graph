@@ -1,0 +1,25 @@
+PREFIX esco: <http://data.europa.eu/esco/model#>
+PREFIX mp: <http://sem.tenforce.com/vocabularies/mapping-platform/>
+PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX skosxl: <http://www.w3.org/2008/05/skos-xl#>
+
+CONSTRUCT
+{
+  ?uri ?p ?o .
+  ?prefLabel ?q ?r .
+}
+WHERE
+{
+  ?uri a esco:Occupation, esco:MemberConcept ; ?p ?o .
+
+  OPTIONAL {
+    ?uri skosxl:prefLabel ?prefLabel .
+    ?prefLabel ?q ?r .
+  } .
+
+  OPTIONAL {
+    ?uri skosxl:altLabel ?altLabel .
+    ?altLabel ?s ?t .
+  } .
+}

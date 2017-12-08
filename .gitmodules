@@ -1,0 +1,30 @@
+[submodule "esco-core-scheduler"]
+	path = esco-core-scheduler
+	url = https://github.com/tenforce/esco-core-scheduler
+[submodule "esco-core-solr"]
+	path = esco-core-solr
+	url = https://github.com/tenforce/esco-core-solr
+[submodule "esco-core-delta-based-indexer"]
+	path = esco-core-delta-based-indexer
+	url = https://github.com/tenforce/esco-core-delta-based-indexer
+[submodule "esco-core-hierarchy"]
+	path = esco-core-hierarchy
+	url = https://github.com/tenforce/esco-core-hierarchy
+[submodule "esco-core-kpis"]
+	path = esco-core-kpis
+	url = https://github.com/tenforce/esco-core-kpis
+[submodule "esco-core-validation"]
+	path = esco-core-validation
+	url = https://github.com/tenforce/esco-core-validation
+[submodule "esco-mapping-frontend"]
+	path = esco-mapping-frontend
+	url = https://github.com/tenforce/esco-mapping-frontend
+[submodule "esco-mapping-export"]
+	path = esco-mapping-export
+	url = https://github.com/tenforce/esco-mapping-export
+[submodule "esco-mapping-importer"]
+	path = esco-mapping-importer
+	url = https://github.com/tenforce/esco-mapping-importer
+[submodule "esco-core-move-graph"]
+	path = esco-core-move-graph
+	url = https://github.com/tenforce/esco-core-move-graph

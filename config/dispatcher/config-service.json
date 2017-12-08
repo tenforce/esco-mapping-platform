@@ -1,0 +1,137 @@
+[
+  {
+    "expression": "/sessions/(.*)",
+    "server": {
+      "protocol":"http",
+      "name": "login",
+      "port": 80,
+      "path": "/sessions/$1"
+    }
+  },
+  {
+    "expression": "/concepts/(.*)",
+    "server": {
+      "protocol":"http",
+      "name": "resource",
+      "port": 80,
+      "path": "/concepts/$1"
+    }
+  },
+  {
+    "expression": "/tasks/(.*)",
+    "server": {
+      "protocol":"http",
+      "name": "resource",
+      "port": 80,
+      "path": "/tasks/$1"
+    }
+  },
+  {
+    "expression": "/label-roles/(.*)",
+    "server": {
+      "protocol":"http",
+      "name": "resource",
+      "port": 80,
+      "path": "/label-roles/$1"
+    }
+  },
+  {
+    "expression": "/concept-labels/(.*)",
+    "server": {
+      "protocol":"http",
+      "name": "resource",
+      "port": 80,
+      "path": "/concept-labels/$1"
+    }
+  },
+  {
+    "expression": "/taxonomies/(.*)",
+    "server": {
+      "protocol":"http",
+      "name": "resource",
+      "port": 80,
+      "path": "/taxonomies/$1"
+    }
+  },
+  {
+    "expression": "/hierarchies/(.*)",
+    "server": {
+      "protocol":"http",
+      "name": "resource",
+      "port": 80,
+      "path": "/hierarchies/$1"
+    }
+  },
+  {
+    "expression": "/hierarchy/(.*)",
+    "server": {
+      "protocol":"http",
+      "name": "hierarchyapi",
+      "port": 80,
+      "path": "/hierarchies/$1"
+    }
+  },
+  {
+    "expression": "/concept-relations/(.*)",
+    "server": {
+      "protocol":"http",
+      "name": "resource",
+      "port": 80,
+      "path": "/concept-relations/$1"
+    }
+  },
+  {
+    "expression": "/accounts/(.*)",
+    "server": {
+      "protocol":"http",
+      "name": "resource",
+      "port": 80,
+      "path": "/accounts/$1"
+    }
+  },
+  {
+    "expression": "/users/(.*)",
+    "server": {
+      "protocol":"http",
+      "name": "resource",
+      "port": 80,
+      "path": "/users/$1"
+    }
+  },
+  {
+    "expression": "/upload/(.*)",
+    "server": {
+      "protocol":"http",
+      "name": "importer",
+      "port": 8080,
+      "path": "/upload/$1"
+    }
+  },
+  {
+    "expression": "/comments/(.*)",
+    "server": {
+      "protocol":"http",
+      "name": "commentsapi",
+      "port": 8080,
+      "path": "/$1"
+    }
+  },
+  {
+    "expression": "/kpis/(.*)",
+    "server": {
+      "protocol":"http",
+      "name": "kpisapi",
+      "port": 80,
+      "path": "/kpis/$1"
+    }
+  },
+  {
+    "expression": "/poetry-tasks/(.*)",
+    "server": {
+      "protocol":"http",
+      "name": "resource",
+      "port": 80,
+      "path": "/poetry-tasks/$1"
+    }
+  }
+]

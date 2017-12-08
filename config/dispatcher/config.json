@@ -1,0 +1,405 @@
+[
+  {
+    "expression": "/sessions((?:/.*)?)",
+    "content-types": [
+      "application/json",
+      "application/vnd.api+json"
+    ],
+    "server": {
+      "protocol":"http",
+      "name": "login",
+      "port": 80,
+      "path": "/sessions$1"
+    }
+  },
+  {
+    "expression": "/concepts((?:/.*)?)",
+    "content-types": [
+      "application/json",
+      "application/vnd.api+json"
+    ],
+    "server": {
+      "protocol":"http",
+      "name": "resource",
+      "port": 80,
+      "path": "/concepts$1"
+    }
+  },
+  {
+    "expression": "/tasks((?:/.*)?)",
+    "content-types": [
+      "application/json",
+      "application/vnd.api+json"
+    ],
+    "server": {
+      "protocol":"http",
+      "name": "resource",
+      "port": 80,
+      "path": "/tasks$1"
+    }
+  },
+  {
+    "expression": "/validation-result-collections((?:/.*)?)",
+    "content-types": [
+      "application/json",
+      "application/vnd.api+json"
+    ],
+    "server": {
+      "protocol":"http",
+      "name": "resource",
+      "port": 80,
+      "path": "/validation-result-collections$1"
+    }
+  },
+  {
+    "expression": "/validation((?:/.*)?)",
+    "content-types": [
+      "application/json",
+      "application/vnd.api+json"
+    ],
+    "server": {
+      "protocol":"http",
+      "name": "validation",
+      "port": 80,
+      "path": "/$1"
+    }
+  },
+  {
+    "expression": "/validations((?:/.*)?)",
+    "content-types": [
+      "application/json",
+      "application/vnd.api+json"
+    ],
+    "server": {
+      "protocol":"http",
+      "name": "validation",
+      "port": 80,
+      "path": "/$1"
+    }
+  },
+  {
+    "expression": "/validation-results((?:/.*)?)",
+    "content-types": [
+      "application/json",
+      "application/vnd.api+json"
+    ],
+    "server": {
+      "protocol":"http",
+      "name": "resource",
+      "port": 80,
+      "path": "/validation-results$1"
+    }
+  },
+  {
+    "expression": "/label-roles((?:/.*)?)",
+    "content-types": [
+      "application/json",
+      "application/vnd.api+json"
+    ],
+    "server": {
+      "protocol":"http",
+      "name": "resource",
+      "port": 80,
+      "path": "/label-roles$1"
+    }
+  },
+  {
+    "expression": "/concept-labels((?:/.*)?)",
+    "content-types": [
+      "application/json",
+      "application/vnd.api+json"
+    ],
+    "server": {
+      "protocol":"http",
+      "name": "resource",
+      "port": 80,
+      "path": "/concept-labels$1"
+    }
+  },
+  {
+    "expression": "/taxonomies((?:/.*)?)",
+    "content-types": [
+      "application/json",
+      "application/vnd.api+json"
+    ],
+    "server": {
+      "protocol":"http",
+      "name": "resource",
+      "port": 80,
+      "path": "/taxonomies$1"
+    }
+  },
+  {
+    "expression": "/hierarchies((?:/.*)?)",
+    "content-types": [
+      "application/json",
+      "application/vnd.api+json"
+    ],
+    "server": {
+      "protocol":"http",
+      "name": "resource",
+      "port": 80,
+      "path": "/hierarchies$1"
+    }
+  },
+  {
+    "expression": "/hierarchy((?:/.*)?)",
+    "content-types": [
+      "application/json",
+      "application/vnd.api+json"
+    ],
+    "server": {
+      "protocol":"http",
+      "name": "hierarchyapi",
+      "port": 80,
+      "path": "/hierarchies$1"
+    }
+  },
+  {
+    "expression": "/concept-relations((?:/.*)?)",
+    "content-types": [
+      "application/json",
+      "application/vnd.api+json"
+    ],
+    "server": {
+      "protocol":"http",
+      "name": "resource",
+      "port": 80,
+      "path": "/concept-relations$1"
+    }
+  },
+  {
+    "expression": "/accounts((?:/.*)?)",
+    "content-types": [
+      "application/json",
+      "application/vnd.api+json"
+    ],
+    "server": {
+      "protocol":"http",
+      "name": "resource",
+      "port": 80,
+      "path": "/accounts$1"
+    }
+  },
+  {
+    "expression": "/users((?:/.*)?)",
+    "content-types": [
+      "application/json",
+      "application/vnd.api+json"
+    ],
+    "server": {
+      "protocol":"http",
+      "name": "resource",
+      "port": 80,
+      "path": "/users$1"
+    }
+  },
+  {
+    "expression": "/upload((?:/.*)?)",
+    "content-types": [
+      "application/json",
+      "application/vnd.api+json"
+    ],
+    "server": {
+      "protocol":"http",
+      "name": "importer",
+      "port": 8080,
+      "path": "/upload$1"
+    }
+  },
+  {
+    "expression": "/comments((?:/.*)?)",
+    "content-types": [
+      "application/json",
+      "application/vnd.api+json"
+    ],
+    "server": {
+      "protocol":"http",
+      "name": "commentsapi",
+      "port": 8080,
+      "path": "/comments$1"
+    }
+  },
+  {
+    "expression": "/kpis((?:/.*)?)",
+    "content-types": [
+      "application/json",
+      "application/vnd.api+json"
+    ],
+    "server": {
+      "protocol":"http",
+      "name": "kpisapi",
+      "port": 80,
+      "path": "/kpis$1"
+    }
+  },
+  {
+    "expression": "/translate((?:/.*)?)",
+    "content-types": [
+      "application/json",
+      "application/vnd.api+json"
+    ],
+    "server": {
+      "protocol":"http",
+      "name": "dictionary",
+      "port": 80,
+      "path": "/translate$1"
+    }
+  },
+  {
+    "expression": "/poetry-tasks((?:/.*)?)",
+    "content-types": [
+      "application/json",
+      "application/vnd.api+json"
+    ],
+    "server": {
+      "protocol":"http",
+      "name": "resource",
+      "port": 80,
+      "path": "/poetry-tasks$1"
+    }
+  },
+  {
+    "expression": "/suggestions((?:/.*)?)",
+    "content-types": [
+      "application/json",
+      "application/vnd.api+json"
+    ],
+    "server": {
+      "protocol": "http",
+      "name": "resource",
+      "port": 80,
+      "path": "/suggestions$1"
+    }
+  },
+  {
+    "expression": "/mapping-efforts((?:/.*)?)",
+    "content-types": [
+      "application/json",
+      "application/vnd.api+json"
+    ],
+    "server": {
+      "protocol": "http",
+      "name": "resource",
+      "port": 80,
+      "path": "/mapping-efforts$1"
+    }
+  },
+  {
+    "expression": "/mappings((?:/.*)?)",
+    "content-types": [
+      "application/json",
+      "application/vnd.api+json"
+    ],
+    "server": {
+      "protocol": "http",
+      "name": "resource",
+      "port": 80,
+      "path": "/mappings$1"
+    }
+  },
+  {
+    "expression": "/indexer((?:/.*)?)",
+    "content-types": [
+      "application/json",
+      "application/vnd.api+json"
+    ],
+    "server": {
+      "protocol":"http",
+      "name": "indexer",
+      "port": 8080,
+      "path": "/$1"
+    }
+  },
+  {
+    "expression": "/import-concepts((?:/.*)?)",
+    "content-types": [
+      "application/json",
+      "application/vnd.api+json"
+    ],
+    "server": {
+      "protocol": "http",
+      "name": "import-concepts",
+      "port": 9000,
+      "path": "/$1"
+    }
+  },
+  {
+    "expression": "/move-graph((?:/.*)?)",
+    "content-types": [
+      "application/json",
+      "application/vnd.api+json"
+    ],
+    "server": {
+      "protocol": "http",
+      "name": "move-graph",
+      "port": 80,
+      "path": "$1"
+    }
+  },
+  {
+    "expression": "/export-mapping((?:/.*)?)",
+    "content-types": [
+      "application/json",
+      "application/vnd.api+json"
+    ],
+    "server": {
+      "protocol":"http",
+      "name": "export-mapping",
+      "port": 80,
+      "path": "$1"
+    }
+  },
+  {
+    "expression": "/mapping-states((?:/.*)?)",
+    "content-types": [
+      "application/json",
+      "application/vnd.api+json"
+    ],
+    "server": {
+      "protocol": "http",
+      "name": "resource",
+      "port": 80,
+      "path": "/mapping-states$1"
+    }
+  },
+  {
+    "expression": "/cache((?:/.*)?)",
+    "content-types": [
+      "application/json",
+      "application/vnd.api+json"
+    ],
+    "server": {
+      "protocol": "http",
+      "name": "resource",
+      "port": 80,
+      "path": "$1"
+    }
+  },
+  {
+    "expression": "((?:/.*)?)",
+    "content-types": [
+      "text/javascript",
+      "text/css"
+    ],
+    "server": {
+      "protocol": "http",
+      "name": "frontend",
+      "port": 80,
+      "path": "$1"
+    }
+  },
+  {
+    "expression": "((?:/.*)?)",
+    "content-types": [
+      "text/html",
+      "application/xhtml+xml"
+    ],
+    "server": {
+      "protocol": "http",
+      "name": "frontend",
+      "port": 80,
+      "path": "/index.html"
+    }
+  }
+]

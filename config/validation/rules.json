@@ -1,0 +1,52 @@
+{
+    "validations": {
+      "rule10": {
+        "name": "Mapping's mapsFrom URI does not exists",
+        "description": "Returns the mappings that have a non-existing source.",
+        "show":["mapping"],
+        "types": [
+          "mapping"
+        ],
+        "parameters": [
+          "uuid", "labelTo"
+        ],
+        "query": "?x a <change_the_type> ; mu:uuid ?uuid ; mp:mapsFrom ?conceptFrom ; mp:mapsTo ?conceptTo .  OPTIONAL{GRAPH <application_graph> { ?conceptTo skosxl:prefLabel / skosxl:literalForm ?labelTo . }} FILTER NOT EXISTS {GRAPH <application_graph> {?conceptFrom ?p ?o}}"
+      },
+      "rule11": {
+        "name": "Mapping's mapsTo URI does not exists",
+        "description": "Returns the mappings that have a non-existing destination.",
+        "show":["mapping"],
+        "types": [
+          "mapping"
+        ],
+        "parameters": [
+          "uuid", "labelFrom"
+        ],
+        "query": "?x a <change_the_type> ; mu:uuid ?uuid ; mp:mapsFrom ?conceptFrom ; mp:mapsTo ?conceptTo .  OPTIONAL{GRAPH <application_graph> { ?conceptFrom skosxl:prefLabel / skosxl:literalForm ?labelFrom . }} FILTER NOT EXISTS {GRAPH <application_graph> {?conceptTo ?p ?o}}"
+      },
+      "rule12": {
+        "name": "Mapping's mapsFrom is not mappable",
+        "description": "Returns the mappings where the source concept is not mappable.",
+        "show":["mapping"],
+        "types": [
+          "mapping"
+        ],
+        "parameters": [
+          "uuid", "labelFrom"
+        ],
+        "query": "?x a <change_the_type> ; mu:uuid ?uuid ; mp:mapsFrom ?conceptFrom .  OPTIONAL{GRAPH <application_graph> { ?conceptFrom skosxl:prefLabel / skosxl:literalForm ?labelFrom . }} FILTER NOT EXISTS {GRAPH <application_graph> {?conceptFrom mp:isMappable 'true'}}"
+      },
+      "rule13": {
+        "name": "Mapping's mapsTo is not mappable",
+        "description": "Returns the mappings where the target concept is not mappable.",
+        "show":["mapping"],
+        "types": [
+          "mapping"
+        ],
+        "parameters": [
+          "uuid", "labelTo"
+        ],
+          "query": "?x a <change_the_type> ; mu:uuid ?uuid ; mp:mapsTo ?conceptTo .  OPTIONAL{GRAPH <application_graph> { ?conceptTo skosxl:prefLabel / skosxl:literalForm ?labelTo . }} FILTER NOT EXISTS {GRAPH <application_graph> {?conceptTo mp:isMappable 'true'}}"
+      }
+    }
+}

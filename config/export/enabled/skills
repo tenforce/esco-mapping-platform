@@ -1,0 +1,28 @@
+PREFIX esco: <http://data.europa.eu/esco/model#>
+PREFIX mp: <http://sem.tenforce.com/vocabularies/mapping-platform/>
+PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX skosxl: <http://www.w3.org/2008/05/skos-xl#>
+
+SELECT ?uri ?isco ?prefLabel (group_concat(?altLabel ; separator="|") AS ?altLabels)
+WHERE
+{
+  ?uri a esco:Skill, esco:MemberConcept .
+
+  OPTIONAL {
+    ?uri skosxl:prefLabel/skosxl:literalForm ?prefLabel .
+    FILTER ( lang(?prefLabel) = %language% ) .
+  }
+
+  OPTIONAL {
+    ?uri esco:memberOfISCOGroup ?isco .
+    ?isco skos:inScheme <http://data.europa.eu/esco/ConceptScheme/ISCO2008> .
+  } .
+
+  OPTIONAL {
+    ?uri skosxl:altLabel/skosxl:literalForm ?altLabel .
+    FILTER ( lang(?altLabel) = %language% )
+  } .
+}
+GROUP BY ?uri ?isco ?prefLabel
+ORDER BY ?isco
